@@ -46,7 +46,7 @@ addBtn.addEventListener('click', ()=> {
     deleteBtn.addEventListener('click', function(){
         expenses.splice(expenses.indexOf(expense), 1);
 
-        totalAmount -= expenses.amount;
+        totalAmount -= expense.amount;
         totalAmountCell.textContent = totalAmount;
 
         expensesTable.removeChild(newRow);
@@ -69,7 +69,7 @@ for(const expense of expenses) {
     const  amountCell = newRow.insertCell()
     const  dateCell = newRow.insertCell()
     const deleteCell = newRow.insertCell()
-    const deteteBtn = document.createElement('button');
+    const deleteBtn = document.createElement('button');
 
     deleteBtn.textContent = 'Delete';
     deleteBtn.classList.add('delete-btn')
